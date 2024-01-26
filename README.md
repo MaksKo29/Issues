@@ -10,7 +10,7 @@ POST - с помощью mutattion в GraphQL удаляется issue
 
 GET - получение списка issue. Скрипт по id проверяет удалилась ли нужное issue.   
 
-
+---
 Документация для API GitHub issues  
 
 https://docs.github.com/en/rest/issues/issues?apiVersion=2022-11-28#about-issues  
