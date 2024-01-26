@@ -12,14 +12,11 @@ GET - получение списка issue. Скрипт по id проверя
 
 ---
 + Документация для API GitHub issues  
-
 https://docs.github.com/en/rest/issues/issues?apiVersion=2022-11-28#about-issues  
 
 + Документация о mutation  
-
 https://docs.github.com/en/graphql/guides/forming-calls-with-graphql#about-mutations  
 
 + Документация о удалении issue  
-
 https://docs.github.com/en/graphql/reference/mutations#deleteissue  
 
