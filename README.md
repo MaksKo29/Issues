@@ -11,15 +11,15 @@ POST - с помощью mutattion в GraphQL удаляется issue
 GET - получение списка issue. Скрипт по id проверяет удалилась ли нужное issue.   
 
 ---
-Документация для API GitHub issues  
++Документация для API GitHub issues  
 
 https://docs.github.com/en/rest/issues/issues?apiVersion=2022-11-28#about-issues  
 
-Документация о mutation  
++Документация о mutation  
 
 https://docs.github.com/en/graphql/guides/forming-calls-with-graphql#about-mutations  
 
-Документация о удалении issue  
++Документация о удалении issue  
 
 https://docs.github.com/en/graphql/reference/mutations#deleteissue  
 
