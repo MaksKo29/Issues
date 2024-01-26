@@ -241,7 +241,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "{{token2}}",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -271,52 +271,7 @@
 			"response": []
 		},
 		{
-			"name": "Get an issue",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"var template = `\r",
-							"    <table>\r",
-							"         <thead>\r",
-							"             <tr>\r",
-							"                 <th>number</th>\r",
-							"                 <th>title</th>\r",
-							"                 <th>body</th>\r",
-							"             </tr>\r",
-							"         </thead>  \r",
-							"         {{#each response}}\r",
-							"             <tr>\r",
-							"                 <td>{{number}}</td>\r",
-							"                 <td>{{title}}</td>\r",
-							"                 <td>{{body}}</td>\r",
-							"             </tr>\r",
-							"         {{/each}}\r",
-							"    </table>\r",
-							"`;\r",
-							"\r",
-							"pm.visualizer.set(template, {\r",
-							"    response: pm.response.json()\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"The issue has been deleted\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData[0].note_id).to.not.eql(\"{{node_id}}\");\r",
-							"    \r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "New Request",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -329,31 +284,7 @@
 					]
 				},
 				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://api.github.com/repos/MaksKo29/Issues/issues",
-					"protocol": "https",
-					"host": [
-						"api",
-						"github",
-						"com"
-					],
-					"path": [
-						"repos",
-						"MaksKo29",
-						"Issues",
-						"issues"
-					]
-				}
+				"header": []
 			},
 			"response": []
 		}
@@ -363,7 +294,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "{{token2}}",
+				"value": "{{token}}",
 				"type": "string"
 			}
 		]
@@ -393,11 +324,6 @@
 			"key": "token",
 			"value": "",
 			"type": "default"
-		},
-		{
-			"key": "token2",
-			"value": "",
-			"type": "string"
 		}
 	]
 }
