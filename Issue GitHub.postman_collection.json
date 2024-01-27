@@ -296,19 +296,19 @@
 							"    </table>\r",
 							"`;\r",
 							"\r",
-							"pm.visualizer.set(template, {\r",
-							"    response: pm.response.json()\r",
-							"});\r",
+							"pm.visualizer.set(template, { response: pm.response.json() })\r",
 							"\r",
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test('Status code is 200', function () {\r",
 							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Issue deleted\", function () {\r",
+							"  var expectedString = \"{{issuesid}}\";\r",
+							"  var responseBody = pm.response.text();\r",
+							"  pm.expect(responseBody).not.to.contain(expectedString);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"The issue has been deleted\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData[0].note_id).to.not.eql(\"{{node_id}}\");\r",
-							"    \r",
-							"});"
+							""
 						],
 						"type": "text/javascript"
 					}
